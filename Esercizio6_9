@@ -1,0 +1,43 @@
+public class SelectionSort {
+
+    // Scrivere un metodo statico per il selection sort che ordini un array di caratteri
+    
+    public static void selectionSort(char[] array) {
+        int n = array.length;
+
+        for (int i = 0; i < n - 1; i++) {
+
+            int minIndex = i;
+            for (int j = i + 1; j < n; j++) {
+                if (array[j] < array[minIndex]) {
+                    minIndex = j;
+                }
+            }
+
+            if (minIndex != i) {
+                char temp = array[i];
+                array[i] = array[minIndex];
+                array[minIndex] = temp;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+
+        char[] array = {'z', 'b', 'd', 'a', 'c', 'y', 'e'};
+
+        System.out.println("Array originale:");
+        for (char c : array) {
+            System.out.print(c + " ");
+        }
+        System.out.println();
+
+        selectionSort(array);
+
+        System.out.println("Array ordinato:");
+        for (char c : array) {
+            System.out.print(c + " ");
+        }
+        System.out.println();
+    }
+}

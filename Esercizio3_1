@@ -1,0 +1,15 @@
+public class VerificaPunteggio {
+    public static void main(String[] args) {
+        
+//scrivere un frammento di codice che verifichi che la variabile intera
+//punteggio contenga un valore valido. Si supponga che i valori validi se sono compresi tra 0 e 100
+        
+        int punteggio = 85;
+
+        if (punteggio >= 0 && punteggio <= 100) {
+            System.out.println("Il punteggio è valido.");
+        } else {
+            System.out.println("Il punteggio non è valido.");
+        }
+    }
+}

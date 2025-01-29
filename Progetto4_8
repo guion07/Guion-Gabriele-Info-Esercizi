@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Palindroma {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        //si scriva un programma che individua se una parola è palindroma, cioè se scritta nel verso opposto è uguale alla parola di partenza.
+        // Anna, per esempio, è una parola palindroma. Il programma deve terminare quando viene scritta la parola uscita
+
+        while (true) {
+            System.out.print("Inserisci una parola (o 'uscita' per terminare): ");
+            String parola = scanner.nextLine();
+
+            if (parola.equalsIgnoreCase("uscita")) {
+                System.out.println("Programma terminato.");
+                break;
+            }
+
+            if (isPalindroma(parola)) {
+                System.out.println(parola + " è una parola palindroma.");
+            } else {
+                System.out.println(parola + " non è una parola palindroma.");
+            }
+        }
+
+        scanner.close();
+    }
+
+    public static boolean isPalindroma(String parola) {
+        String parolaInversa = "";
+        
+        for (int i = parola.length() - 1; i >= 0; i--) {
+            parolaInversa += parola.charAt(i);
+        }
+        
+        return parola.equalsIgnoreCase(parolaInversa);
+    }
+}

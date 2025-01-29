@@ -1,0 +1,35 @@
+public class OrdinaEStampa {
+
+    // Si realizzi una classe java che abbia definito il metodo ordinaEstampa che accetta in ingresso tre valori interi
+    //e visualizza quindi gli interi in ordine crescente. Si scriva un programma driver per collaudare il metodo
+
+    public static void ordinaEStampa(int num1, int num2, int num3) {
+
+        int temp;
+        
+        if (num1 > num2) {
+            temp = num1;
+            num1 = num2;
+            num2 = temp;
+        }
+        if (num2 > num3) {
+            temp = num2;
+            num2 = num3;
+            num3 = temp;
+        }
+        if (num1 > num2) {
+            temp = num1;
+            num1 = num2;
+            num2 = temp;
+        }
+
+        System.out.println("I numeri in ordine crescente sono: " + num1 + ", " + num2 + ", " + num3);
+    }
+
+    public static void main(String[] args) {
+
+        ordinaEStampa(7, 3, 5);
+        ordinaEStampa(1, 2, 3);
+        ordinaEStampa(10, 20, 15);
+    }
+}

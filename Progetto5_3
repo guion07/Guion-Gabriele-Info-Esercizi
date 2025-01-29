@@ -1,0 +1,40 @@
+public class Calcolatrice {
+
+    //scrivere una classe java chiamata Calcolatrice che definisce quattro metodi che rispettivamente 
+    //sommano, moltiplicano, dividono e sottraggono due valori interi. Scrivere quindi un programma driver per collaudare i quattro metodi
+    
+    public static int somma(int a, int b) {
+        return a + b;
+    }
+
+    public static int sottrazione(int a, int b) {
+        return a - b;
+    }
+
+    public static int moltiplicazione(int a, int b) {
+        return a * b;
+    }
+
+    public static double divisione(int a, int b) {
+        if (b == 0) {
+            System.out.println("Errore: divisione per zero");
+            return Double.NaN;
+        }
+        return (double) a / b;
+    }
+
+    public static void main(String[] args) {
+        int num1 = 10;
+        int num2 = 5;
+
+        System.out.println("Somma: " + somma(num1, num2));
+
+        System.out.println("Sottrazione: " + sottrazione(num1, num2));
+
+        System.out.println("Moltiplicazione: " + moltiplicazione(num1, num2));
+
+        System.out.println("Divisione: " + divisione(num1, num2));
+
+        System.out.println("Divisione per zero: " + divisione(num1, 0));
+    }
+}

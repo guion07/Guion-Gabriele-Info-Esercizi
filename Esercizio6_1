@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class NumeriSottoLaMedia {
+
+    public static void main(String[] args) {
+        // Scrivere un programma in una classe NumeriSottoLaMedia che conti il numero di giorni in cui la temperatura è al di sotto della media.
+        //Leggere 10 temperature da tastiera e memorizzarle in un array. Calcolare la temperatura media e contare
+        // e visualizzare il numero di giorni in cui la temperatura è al di sotto della media
+        
+        double[] temperature = new double[10];
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Inserisci 10 temperature:");
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Temperatura del giorno " + (i + 1) + ": ");
+            temperature[i] = scanner.nextDouble();
+        }
+
+        double somma = 0;
+        for (int i = 0; i < 10; i++) {
+            somma += temperature[i];
+        }
+        double media = somma / 10;
+
+        int giorniSottoMedia = 0;
+        for (int i = 0; i < 10; i++) {
+            if (temperature[i] < media) {
+                giorniSottoMedia++;
+            }
+        }
+
+        System.out.println("La temperatura media è: " + media);
+        System.out.println("Il numero di giorni con temperatura sotto la media è: " + giorniSottoMedia);
+    }
+}

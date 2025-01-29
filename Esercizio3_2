@@ -1,0 +1,16 @@
+public class pari_dispari{
+    public static void main(String[] args){
+        //scrivere un frammento di codice che cambi il valore intero memorizzato nella variabile x nel seguente modo: se x è pari, deve essere diviso per 2:
+        // se è dispari deve essere moltiplicato per 3 e gli deve esser sottratto 1
+
+        int x = 10;
+
+        if(x % 2 == 0){
+            x = x % 2;
+        }
+        else{
+            x = x * 3 - 1;
+        }
+        System.out.print("Il valore di x è: " + x);
+    }
+}

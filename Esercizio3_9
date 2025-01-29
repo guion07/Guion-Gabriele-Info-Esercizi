@@ -1,0 +1,14 @@
+public class espres_boole{
+    public static void main(String[] args){
+
+        //si consideri l' espressione booleana ((x > 10) || (x < 100)). perchè quest'espressione probabilmente
+        //non rappresenta quello che il programma avrebbe davvero voluto scrivere?
+
+        int x = 50;
+
+        if (x > 10 && x < 100) {
+            System.out.println("x è compreso tra 10 e 100.");
+        } else {
+            System.out.println("x non è compreso tra 10 e 100.");
+    }
+}

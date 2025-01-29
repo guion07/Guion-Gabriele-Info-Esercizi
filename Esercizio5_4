@@ -1,0 +1,21 @@
+public class VerificaIntervallo {
+
+    // si realizza una classe java che abbia definito un metodo che accetta in ingresso 3 interi min, max e valore. 
+    //Tale metodo deve verificare se valore è all' interno dell' intervallo min - max estremi inclusi. Se all' interno, il metodo restituisce true, false in caso contrario
+
+    public static boolean verificaIntervallo(int min, int max, int valore) {
+
+        return valore >= min && valore <= max;
+    }
+
+    public static void main(String[] args) {
+
+        int min = 10;
+        int max = 20;
+
+        System.out.println(verificaIntervallo(min, max, 15));
+        System.out.println(verificaIntervallo(min, max, 25));
+        System.out.println(verificaIntervallo(min, max, 10));
+        System.out.println(verificaIntervallo(min, max, 20));
+    }
+}

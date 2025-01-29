@@ -1,0 +1,29 @@
+public class ArrayCrescente {
+
+    //scrivere un metodo statico strettamenteCrescente(double[] in) che restituisce true se ogni valore dell' array fornito
+    //in ingresso è maggiore del valore che lo precede, altrimenti restituisce false
+    public static boolean strettamenteCrescente(double[] in) {
+
+        if (in.length < 2) {
+            return true;
+        }
+
+        for (int i = 1; i < in.length; i++) {
+            if (in[i] <= in[i - 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+
+        double[] array1 = {1.2, 2.3, 3.4, 4.5};
+        double[] array2 = {1.2, 2.3, 2.3, 4.5};
+        double[] array3 = {5.0, 4.0, 3.0, 2.0};
+
+        System.out.println("Array 1 è strettamente crescente? " + strettamenteCrescente(array1));
+        System.out.println("Array 2 è strettamente crescente? " + strettamenteCrescente(array2));
+        System.out.println("Array 3 è strettamente crescente? " + strettamenteCrescente(array3));
+    }
+}
